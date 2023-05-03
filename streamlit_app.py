@@ -26,5 +26,4 @@ st.line_chart(df)
 # creating a holoviews plot
 nice_plot = df.hvplot(kind='scatter')
 
-# this doesn't work unfortunately. How can i show 'nice_plot'
-st.bokeh_chart(nice_plot)
+st.write(hv.render(nice_plot, backend='bokeh'))
